@@ -42,7 +42,7 @@ export default {
         innerHTML: `window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-      
+
         gtag('config', 'UA-55734909-4');`,
       },
       {
@@ -63,7 +63,7 @@ export default {
           `,
       },
     ],
-  }, 
+  },
 
   css: [
     "@/assets/css/style.css",
@@ -197,4 +197,7 @@ export default {
       Sitemap: "https://cantra-test.a-lux.dev/sitemap.xml",
     },
   ],
+  generate: {
+    dir: 'public'
+  }
 };
