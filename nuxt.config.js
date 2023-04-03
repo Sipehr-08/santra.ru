@@ -182,6 +182,8 @@ export default {
     },
   },
 
+  buildDir: 'nuxt-dist',
+
   robots: [
     {
       UserAgent: "*",
