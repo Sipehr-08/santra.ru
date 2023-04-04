@@ -410,6 +410,7 @@ export default {
   overflow-x: scroll;
 }
 .category-item {
+  cursor: pointer;
   border-width: 2px;
   font-size: 14px;
   font-variation-settings: "wght" 550;
