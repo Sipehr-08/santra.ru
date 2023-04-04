@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /cart
+Disallow: /cart/receipt
+User-agent: YandexImages
+Disallow: /
+Allow: /assets/img
+Host: https://cantra-test.a-lux.dev
+Sitemap: https://cantra-test.a-lux.dev/sitemap.xml
