@@ -6,7 +6,7 @@
         <nuxt-link style="margin-right: 2px" :to="{name: 'catalog'}">Каталог</nuxt-link>
         /
         <span style="color: #9d9d9d; margin-left: 2px ">
-          {{ $route.query.type }}
+          {{ type }}
         </span>
       </div>
       <div style="display: flex; justify-content: space-between">
@@ -206,7 +206,7 @@ export default {
       types: [],
       seasons: [],
       price: "",
-      type: this.$route.query?.type,
+      type: '',
       season: "",
       filterData: [],
       filterings: {
@@ -227,6 +227,32 @@ export default {
     }
   },
   mounted() {
+    switch (this.$route.params.type) {
+      case "detskie-aksessuary":
+        this.type = "Детские аксессуары"
+        break;
+      case "sirokaya-spinka":
+        this.type = "Широкая спинка"
+        break;
+      case "sportivnye":
+        this.type = "Спортивные"
+        break;
+      case "aksessuary":
+        this.type = "Аксессуары"
+        break;
+      case "zadnie-nakidki":
+        this.type = "Задние накидки"
+        break;
+      case "komplekty-nakidok":
+        this.type = "Комплекты накидок"
+        break;
+        case "perednie-nakidki":
+        this.type = "Передние накидки"
+        break;
+      default:
+        this.type = ""
+        break;
+    }
     this.$axios.get("https://project.a-lux.dev/api/footer").then((res) => {
       this.footer = res.data;
     });
@@ -235,21 +261,11 @@ export default {
       .post("https://project.a-lux.dev/api/items", {
         id: "",
         order: this.$route.query.price,
-        type: this.$route.query.type,
+        type: this.type,
         season: this.$route.query.season,
       })
       .then((res) => {
-
-        if (this.$route.query.type === 'sport') {
-          const sport = res.data.filter((item) => {
-            return item.secondtype === "Спортивные"
-          })
-
-          this.products = sport
-        } else {
           this.products = res.data;
-        }
-
         this.savedData = this.products.slice();
 
         this.products.forEach((element) => {
@@ -289,8 +305,6 @@ export default {
     },
     selectedType(a) {
       this.filterings.type = a;
-      console.log(a)
-      console.log(this.$route.query)
 
       this.$axios
         .post("https://project.a-lux.dev/api/items", {
