@@ -182,8 +182,6 @@ export default {
     },
   },
 
-  buildDir: 'nuxt-dist',
-
   robots: [
     {
       UserAgent: "*",
@@ -199,7 +197,4 @@ export default {
       Sitemap: "https://cantra-test.a-lux.dev/sitemap.xml",
     },
   ],
-  generate: {
-    dir: 'public'
-  }
 };
