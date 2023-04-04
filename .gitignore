@@ -1,4 +1,3 @@
-# Created by .ignore support plugin (hsz.mobi)
 ### Node template
 # Logs
 /logs
@@ -6,7 +5,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/.history
+
 .vscode
+
 # Runtime data
 pids
 *.pid
@@ -31,13 +33,13 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (https://nodejs.orghttps://project.a-lux.dev/api/addons.html)
+# Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directories
 node_modules/
 jspm_packages/
-package-lock.json
+
 # TypeScript v1 declaration files
 typings/
 
@@ -58,6 +60,11 @@ typings/
 
 # dotenv environment variables file
 .env
+.env.staging
+.env.development
+.env.local
+
+config.dev.js
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -66,7 +73,7 @@ typings/
 .next
 
 # nuxt.js build output
-#.nuxt
+.nuxt
 
 # Nuxt generate
 dist
@@ -88,3 +95,9 @@ sw.*
 
 # Vim swap files
 *.swp
+
+Dockerfile
+Makefile
+
+static/robots.txt
+.render
