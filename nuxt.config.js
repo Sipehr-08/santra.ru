@@ -1,7 +1,6 @@
 const axios = require("axios");
 
 export default {
-  target: 'static',
   head: {
     title:
       "Накидки на автомобильные сиденья, автонакидки для автомобилей от производителя Cantra™",
