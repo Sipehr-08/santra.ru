@@ -9,6 +9,11 @@
           {{ type }}
         </span>
       </div>
+      <div class="category">
+        <div @click="$router.push({name: 'catalog-type', params: {type: type.slug}})" v-for="type in types" :key="type.name" class="category-item">
+          {{ type.name }}
+        </div>
+      </div>
       <div style="display: flex; justify-content: space-between">
         <div class="category-sort">
           <div class="sort">

@@ -3,7 +3,7 @@
     <div class="cantra_content">
       <h2 class="catalog_header_category" @click="chekUrl()">Каталог</h2>
       <div class="category">
-        <div @click="$router.push({name: 'catalog-type', params: {type: type.slug}})" v-for="type in types" :key="type" class="category-item">
+        <div @click="$router.push({name: 'catalog-type', params: {type: type.slug}})" v-for="type in types" :key="type.slug" class="category-item">
             {{ type.name }}
         </div>
       </div>
