@@ -196,9 +196,9 @@ export default {
   layout: "default",
   head() {
     return {
-      title: 'Купить чехол на автомобиль - описание, фото, отзывы, цена от производителя Cantra™',
+      title: this.metaTitle,
       meta: [
-        { hid: 'description', name: 'description', content: '★ Продажа чехлов на автомобиль от  официального производителя Cantra™★ Доступная цена, гарантия, доставка и салоны по всей России.'},
+        { hid: 'description', name: 'description', content: this.metaDescription},
         { hid: 'keywords', name: 'keywords', content: 'чехол на автомобиль цена, чехол на автомобиль цена, купить чехол на автомобиль в интернет, сколько стоит чехол на автомобиль'}
       ]
     }
@@ -221,6 +221,8 @@ export default {
       },
       savedData: "",
       swichData: true,
+      metaTitle: 'Накидки на передние сиденья /  купить передние накидки на сиденья - Cantra.ru',
+      metaDescription: 'Передние накидки на сиденья Автомобиля в Москве  ⭐ накидки из ✓ Велюр ✓ Алькантары ✓ Экокожи ✓ Массажные, большой выбор для заказа ☎ +7 499 967-84-41'
     };
   },
   watch: {
@@ -247,9 +249,13 @@ export default {
         break;
       case "zadnie-nakidki":
         this.type = "Задние накидки"
+        this.metaTitle = 'Накидка на заднее сиденье / купить накидку на заднее сидение - Cantra.ru'
+        this.metaDescription = 'Накидки для Автомобилей Premium класса  в Москве ⭐ мы предлагаем  ✓ Качество ✓Надежность ✓ Эксклюзивность. Широкий ассортимент накидок для авто ☎ +7 499 967-84-41'
         break;
       case "komplekty-nakidok":
         this.type = "Комплекты накидок"
+        this.metaTitle = 'Комплект накидок на сиденья автомобиля / купить накидки на сиденья универсальные - Cantra.ru'
+        this.metaDescription = 'Комплект накидок для сиденья в магазина Cantra в Москве  ⭐ Универсальные накидки под любое Авто высокого качества с качеством гарантии. Заказы по России ☎ +7 499 967-84-41\n'
         break;
         case "perednie-nakidki":
         this.type = "Передние накидки"
