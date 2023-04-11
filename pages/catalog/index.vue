@@ -407,7 +407,7 @@ export default {
   margin-bottom: 20px;
   display: flex;
   gap: 15px;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 .category-item {
   cursor: pointer;
